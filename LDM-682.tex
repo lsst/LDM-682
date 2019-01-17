@@ -1,0 +1,78 @@
+% vim: tw=0:wrap:linebreak
+\documentclass[DM,toc,lsstdraft]{lsstdoc}
+
+\usepackage{comment}
+\usepackage{datetime}
+\usepackage{microtype}
+
+\newcommand{\microarcsec}{$\mu$as\xspace}
+\interfootnotelinepenalty=10000
+
+
+\setcounter{secnumdepth}{3}
+
+%%%%%%%%%%%%%%%%%%%%%
+% Introduce mechanism to turn on and off various annotations (\XXX command,
+% \begin{notes}, and anything else bracketed by \ifannotated ... \fi)
+%
+\newif\ifannotated
+\annotatedtrue
+\annotatedfalse	% uncomment this to hide all annotations (comments, notes, etc)
+
+\ifannotated
+	% leave things as-is
+\else
+	% hide all \XXX commands
+	\renewcommand{\XXX}{}
+
+	% hide all \begin{note}...\end{note} text
+	\renewenvironment{note}[1][Note]
+	{}
+	{}
+\fi
+%%%%%%%%%%%%%%%%%%%%%
+
+\title{Call for Letters of Intent for Community Alert Brokers}
+\author{
+Eric~Bellm,
+Robert~Blum,
+Melissa~Graham,
+Leanne~Guy,
+\v{Z}eljko~Ivezi\'{c},
+William~O'Mullane,
+and John~Swinbank
+\emph{for the LSST Project}
+}
+
+\input{meta}
+\setDocRef{\lsstDocType-\lsstDocNum}
+\setDocCurator{E.~Bellm}
+\setDocDate{\vcsdate}
+\setDocUpstreamVersion{\vcsrevision}
+\setDocUpstreamLocation{\url{https://github.com/lsst/LDM-682}}
+
+\setDocAbstract{%
+	abstract
+}
+
+%
+%   Revision history
+%
+% OLDEST FIRST: VERSION, DATE, DESCRIPTION, OWNER NAME
+\setDocChangeRecord{%
+\addtohist{}{2019-01-17}{Initial draft version}{Eric Bellm}
+}
+
+
+\begin{document}
+
+\maketitle
+
+%\clearpage
+%\section{Acronyms}
+%\input{acronyms}
+
+%\bibliography{lsst,refs_ads,refs,local}
+
+
+\end{document}
