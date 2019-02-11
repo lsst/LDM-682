@@ -3,192 +3,69 @@
 % The call for white papers can be found at ls.st/LDM-682
 
 
-\documentclass[12pt, letterpaper]{article}
-\usepackage[top=1in, bottom=1.5in, left=1in, right=1in]{geometry}
+\documentclass[11pt, letterpaper]{article}
+\usepackage{savetrees}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
 \usepackage{hyperref}
 
+
 \title{Template for LSST Call for Letters of Intent for Community Alert Brokers}
-\author{}
-\date{May 2019}
+\author{A. Author (U. of Affiliation)\footnote{author@affil.edu}\ and B. Author (Affiliation Institute)}
+\date{}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-Please provide a short summary of your scientific goals and survey strategy modifications here.
+Please provide a short overview of your proposed broker here.
+
+Please refer to LDM-682 for detailed submission instructions.
 \end{abstract}
 
-\section{White Paper Information}
-Please provide contact information (name and email address) of the appropriate author(s) for this white paper.
-In addition, please provide the following categorization for your white paper:
-\begin{enumerate} 
-\item {\bf Science Category:} which of the four main LSST science themes are addressed? Are there other
-science programs addressed by this white paper?
-\item {\bf Survey Type Category:} please choose one of the following possibilities: the main `wide-fast-deep'
-   survey, mini survey, Deep Drilling field, Target of Opportunity observation, Other (provide details). 
-\item {\bf Observing Strategy Category:} please choose one of the following possibilities: 
-    \begin{itemize} 
-     \item a specific observing strategy to enable specific time domain science, 
-	that is relatively agnostic to where the telescope is pointed (e.g., a science case enabled 
-	by relatively deep precise time-resolved multi-color photometry). 
-     \item a specific pointing or set of pointings that is (relatively) agnostic of the detailed observing 
-	strategy or cadence, (e.g., a science case enabled by very deep precise multi-color 
-	photometry)
-      \item an integrated program with science that hinges on the combination of pointing and detailed 
-	observing strategy (e.g., search for variable stars in the 
-	LMC/SMC). 
-       \item other category (please describe).
-    \end{itemize}  
-\end{enumerate}  
+
+\section{Scientific goals of the proposed broker system}
+
+Describe the scientific aims of your proposed broker. 
+Does it aim to add value to all LSST alerts, or a subset (e.g., supernovae or asteroids)?
+What science questions will users of your broker be able to answer?
+
+\section{Anticipated Data Products \& Services}
+
+Describe the results of your processing of the LSST alert stream. 
+What kinds of transformations, cross-matches, filters, and/or classifications will your broker perform?
+What are the resulting data products?
+How will users access them?
+Who will be eligible to use your broker?
+Do you anticipate multiple classes of users and/or differing resource allocations?
 
 
-\clearpage
+\section{Envisioned Technical Implementation}
 
-\section{Scientific Motivation}
+Describe the envisioned software and hardware technologies with which you intend to implement your broker service.
+Discuss the maturity of the system---which parts are at a conceptual or early design phase?  Are some prototyped?  In operations?
+Describe the datacenter(s) in which you plan to host your service.
+	
+\section{Management Plan}
 
-\begin{footnotesize}
-{\it Describe the scientific justification for this white paper in the context
-of your field, as well as the importance to the general program of astronomy, 
-including the relevance over the next decade. 
-Describe other relevant data, and justify why LSST is the best facility for these observations.
-(Limit: 2 pages + 1 page for figures.)}
-\end{footnotesize}
+Describe the number of FTEs required during the construction and operations phases.
+Present a high-level timeline for implementing the services to be developed.
+Discuss potential or actual funding sources available to support these activities.
 
-\vspace{.6in}
 
-\section{Technical Description}
-\begin{footnotesize}
-{\it Describe your survey strategy modifications or proposed observations. Please comment on each observing constraint
-below, including the technical motivation behind any constraints. Where relevant, indicate
-if the constraint applies to all requested observations or a specific subset. Please note which 
-constraints are not relevant or important for your science goals.}
-\end{footnotesize}
+\section{Proposing Team}
 
-\subsection{High-level description}
-\begin{footnotesize}
-{\it Describe or illustrate your ideal sequence of observations.}
-\end{footnotesize}
+Describe the roles and expertise of the proposers and any key personnel.
 
-\vspace{.3in}
+\section{Relevant Experience}
 
-\subsection{Footprint -- pointings, regions and/or constraints}
-\begin{footnotesize}{\it Describe the specific pointings or general region (RA/Dec, Galactic longitude/latitude or 
-Ecliptic longitude/latitude) for the observations. Please describe any additional requirements, especially if there
-are no specific constraints on the pointings (e.g. stellar density, galactic dust extinction).}
-\end{footnotesize}
+Describe related services the team has developed, if any.
 
-\subsection{Image quality}
-\begin{footnotesize}{\it Constraints on the image quality (seeing).}\end{footnotesize}
 
-\subsection{Individual image depth and/or sky brightness}
-\begin{footnotesize}{\it Constraints on the sky brightness in each image and/or individual image depth for point sources.
-Please differentiate between motivation for a desired sky brightness or individual image depth (as 
-calculated for point sources). Please provide sky brightness or image depth constraints per filter.}
-\end{footnotesize}
 
-\subsection{Co-added image depth and/or total number of visits}
-\begin{footnotesize}{\it  Constraints on the total co-added depth and/or total number of visits.
-Please differentiate between motivations for a given co-added depth and total number of visits. 
-Please provide desired co-added depth and/or total number of visits per filter, if relevant.}
-\end{footnotesize}
 
-\subsection{Number of visits within a night}
-\begin{footnotesize}{\it Constraints on the number of exposures (or visits) in a night, especially if considering sequences of visits.  }
-\end{footnotesize}
-
-\subsection{Distribution of visits over time}
-\begin{footnotesize}{\it Constraints on the timing of visits --- within a night, between nights, between seasons or
-between years (which could be relevant for rolling cadence choices in the WideFastDeep. 
-Please describe optimum visit timing as well as acceptable limits on visit timing, and options in
-case of missed visits (due to weather, etc.). If this timing should include particular sequences
-of filters, please describe.}
-\end{footnotesize}
-
-\subsection{Filter choice}
-\begin{footnotesize}
-{\it Please describe any filter constraints not included above.}
-\end{footnotesize}
-
-\subsection{Exposure constraints}
-\begin{footnotesize}
-{\it Describe any constraints on the minimum or maximum exposure time per visit required (or alternatively, saturation limits).
-Please comment on any constraints on the number of exposures in a visit.}
-\end{footnotesize}
-
-\subsection{Other constraints}
-\begin{footnotesize}
-{\it Any other constraints.}
-\end{footnotesize}
-
-\subsection{Estimated time requirement}
-\begin{footnotesize}
-{\it Approximate total time requested for these observations, using the guidelines available at \url{https://github.com/lsst-pst/survey_strategy_wp}.}
-\end{footnotesize}
-
-\vspace{.3in}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{l|l|l|l}
-        \toprule
-        Properties & Importance \hspace{.3in} \\
-        \midrule
-        Image quality &     \\
-        Sky brightness &  \\
-        Individual image depth &   \\
-        Co-added image depth &   \\
-        Number of exposures in a visit   &   \\
-        Number of visits (in a night)  &   \\ 
-        Total number of visits &   \\
-        Time between visits (in a night) &  \\
-        Time between visits (between nights)  &   \\
-        Long-term gaps between visits & \\
-        Other (please add other constraints as needed) & \\
-        \bottomrule
-    \end{tabular}
-    \caption{{\bf Constraint Rankings:} Summary of the relative importance of various survey strategy constraints. Please rank the importance of each of these considerations, from 1=very important, 2=somewhat important, 3=not important. If a given constraint depends on other parameters in the table, but these other parameters are not important in themselves, please only mark the final constraint as important. For example, individual image depth depends on image quality, sky brightness, and number of exposures in a visit; if your science depends on the individual image depth but not directly on the other parameters, individual image depth would be `1' and the other parameters could be marked as `3', giving us the most flexibility when determining the composition of a visit, for example.}
-        \label{tab:obs_constraints}
-\end{table}
-
-\subsection{Technical trades}
-\begin{footnotesize}
-{\it To aid in attempts to combine this proposed survey modification with others, please address the following questions:
-\begin{enumerate}
-    \item What is the effect of a trade-off between your requested survey footprint (area) and requested co-added depth or number of visits?
-    \item If not requesting a specific timing of visits, what is the effect of a trade-off between the uniformity of observations and the frequency of observations in time? e.g. a `rolling cadence' increases the frequency of visits during a short time period at the cost of fewer visits the rest of the time, making the overall sampling less uniform.
-    \item What is the effect of a trade-off on the exposure time and number of visits (e.g. increasing the individual image depth but decreasing the overall number of visits)?
-    \item What is the effect of a trade-off between uniformity in number of visits and co-added depth? Is there any benefit to real-time exposure time optimization to obtain nearly constant single-visit limiting depth?
-    \item Are there any other potential trade-offs to consider when attempting to balance this proposal with others which may have similar but slightly different requests?
-\end{enumerate}}
-\end{footnotesize}
-
-\section{Performance Evaluation}
-\begin{footnotesize}
-{\it Please describe how to evaluate the performance of a given survey in achieving your desired
-science goals, ideally as a heuristic tied directly to the observing strategy (e.g. number of visits obtained
-within a window of time with a specified set of filters) with a clear link to the resulting effect on science.
-More complex metrics which more directly evaluate science output (e.g. number of eclipsing binaries successfully
-identified as a result of a given survey) are also encouraged, preferably as a secondary metric.
-If possible, provide threshold values for these metrics at which point your proposed science would be unsuccessful 
-and where it reaches an ideal goal, or explain why this is not possible to quantify. While not necessary, 
-if you have already transformed this into a MAF metric, please add a link to the code (or a PR to 
-\href{https://github.com/lsst-nonproject/sims_maf_contrib}{sims\_maf\_contrib}) in addition to the text description. (Limit: 2 pages).}
-\end{footnotesize}
-
-\vspace{.6in}
-
-\section{Special Data Processing}
-\begin{footnotesize}
-{\it Describe any data processing requirements beyond the standard LSST Data Management pipelines and how these will be achieved.}
-\end{footnotesize}
-
-\section{Acknowledgements}
- \begin{footnotesize}
- {\it If you have any special acknowledgements of support for the preparation of this white paper, please feel free to use this section. If not, feel free to comment out.}
- \end{footnotesize}
 
 \section{References}
 
