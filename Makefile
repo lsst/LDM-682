@@ -38,3 +38,6 @@ tex=$(filter-out $(wildcard *acronyms.tex) , $(wildcard *.tex sections/*tex))
 #The generateAcronyms.py  script is in lsst-texmf/bin - put that in the path
 acronyms.tex :$(tex) myacronyms.txt
 	generateAcronyms.py   $(tex)
+
+template: LOI_submission_template.tex
+	xelatex LOI_submission_template.tex

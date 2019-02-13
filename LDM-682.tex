@@ -66,13 +66,84 @@ and John~Swinbank
 
 \begin{document}
 
+
+\setDocAbstract{%
+A major product of the nightly processing of LSST images is a world-public stream of alerts from transient, variable, and moving sources. Science users may access these alerts through third-party community brokers, which will receive the LSST alerts, add scientific value, and redistribute them to the scientific community.
+ 
+This document is a call for Letters of Intent (LOIs) to propose a community broker, as described in ``Plans and Policies for LSST Alert Distribution'' \citedsp{LDM-612}.
+}
+
 \maketitle
+
+\section{Process}
+
+The broker selection process will have two stages:
+an initial open call for LOIs from all interested parties (described in this document), and a subsequent full proposal call solicited from invited LOI writers.
+This two-stage process ensures those writing full proposals have a reasonable chance at selection and provides an opportunity for early feedback.
+An invitation to submit a full proposal may also be valuable to proposers in obtaining relevant funding.
+No financial support is available from the LSST Project.
+
+
+\section{LOI Guidelines}
+
+\subsection{Who Can Submit}
+
+Individuals at any institution (academic or non-academic) worldwide may submit an LOI.
+Submission is open to all, regardless of whether or not an individual holds LSST data rights.
+
+
+\subsection{Page Limits}
+
+LOIs should be no more than four pages, with standard margins and font sizes.
+A \LaTeX\ template is available at \url{https://github.com/lsst/LDM-682/blob/master/LOI_submission_template.tex}.
+
+\subsection{Due Date}
+
+For full consideration, LOIs should be submitted by May 15, 2019.
+Submission of an LOI is required in order to be invited to submit a full proposal.
+
+\subsection{Content}
+
+
+Proposers are encouraged to read \citeds{LDM-612}: Plans and Policies for LSST Alert Distribution, in preparing their proposal. 
+The LOI should address briefly the following items:
+
+\begin{itemize}
+	\item Scientific goals of the proposed broker system
+	\item Anticipated data products \& services
+	\item Envisioned technical implementation
+	\item Management Plan
+	\item Description of proposing team
+	\item Relevant experience 
+\end{itemize}
+
+The \LaTeX\ template provides a handful of prompts for each section.
+
+\subsection{Submission Instructions}
+
+Please submit LOIs as PDF documents to \url{lsst-community-brokers@lists.lsst.org}.
+
+\section{Broker Workshop}
+
+
+LOI submitters are invited to attend a workshop in Seattle the week of June 17, 2019.
+This technical workshop will bring together LSST Project personnel, representatives of the LSST Science Collaborations, and proposers of community brokers.  
+Topics of discussion will include LSST-broker interfaces, architecture and technology choices, the broker selection process, policy issues, science use cases and expectations, and development progress from precursor surveys.
+More information will be forthcoming soon.
+
+\section{Selection Process and Timeline}
+
+It is understood that proposed brokers may be in formative stages at the time of this call.
+Please refer to \citeds{LDM-612} \S4.5--4.6 for evaluation criteria and procedures.
+
+We anticipate notifying invited LOI writers in August 2019.
+As described in \citeds{LDM-612} we expect to issue the call for full proposals to invited teams in Q4 2019, with an anticipated due date in Q2 2020.
 
 %\clearpage
 %\section{Acronyms}
 %\input{acronyms}
 
-%\bibliography{lsst,refs_ads,refs,local}
+\bibliography{lsst,refs_ads,refs,local}
 
 
 \end{document}
